@@ -13,7 +13,7 @@ def createWidgets():
     link_label = label(root, text="Youtube URL:  ", bg="#E8D579")
     link_label.grid(row=1, column=0, pady=5, padx=5)
     root.link_text = Entry(root, width=60, textvariable=video_link)
-    root.link_text.grid(row=1, column=1)
+    root.link_text.grid(row=1, column=1, pady=5, padx=5)
 
 
 root = tk.Tk()
