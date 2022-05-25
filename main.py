@@ -1,16 +1,12 @@
 from pytube import YouTube
-import os
+
+link = input("Enter the link of YouTube video you want to download:  ")
+yt = YouTube(link)
 
 
-def downloadYouTube(videourl, path):
+print("Title: ", yt.title)
+print("Number of views: ", yt.views)
+print("Length of video: ", yt.length)
+print("Rating of video: ", yt.rating)
 
-    yt = YouTube(videourl)
-    yt = yt.streams.filter(progressive=True, file_extension='mp4').order_by(
-        'resolution').desc().first()
-    if not os.path.exists(path):
-        os.makedirs(path)
-    yt.download(path)
-
-
-downloadYouTube('https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-                './videos/FindingNemo1')
+ys = yt.streams.get_highest_resolution()
