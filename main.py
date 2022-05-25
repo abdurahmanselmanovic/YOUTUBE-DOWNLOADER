@@ -8,8 +8,6 @@ from tkinter.tix import COLUMN
 from pytube import YouTube
 from tkinter import filedialog, messagebox
 
-dsdsdsddsds
-
 
 def createWidgets():
     link_label = label(root, text="Youtube URL:  ", bg="#E8D579")
